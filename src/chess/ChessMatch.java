@@ -11,7 +11,7 @@ public class ChessMatch {
 	
 	public ChessMatch() {
 		board = new Board(8, 8);
-		initialStup();
+		initialSetup();
 	}
 
 	public ChessPiece[][] getPieces() {
@@ -23,9 +23,9 @@ public class ChessMatch {
 		}
 		return mat;
 	}
-	private void initialStup() {
-		board.placePience(new Rook(board, Color.WHITE), new Position(2, 1));
-		board.placePience(new King(board, Color.BLACH), new Position(0, 4));
-		board.placePience(new King(board, Color.BLACH), new Position(7, 4));
+	private void initialSetup() {
+		board.placePiece(new Rook(board, Color.WHITE), new Position(9, 1));
+		board.placePiece(new King(board, Color.BLACK), new Position(9, 1));
+		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
 	}
 }
